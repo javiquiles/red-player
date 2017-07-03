@@ -10,11 +10,15 @@
     <unique-id>ffi862pqu9zv</unique-id>
     <saved-with-version>18400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -106,6 +110,42 @@
             </behaviors>
             <texture original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Tiles\Green tiles\tileGreen_05.png" />
         </object-type>
+        <object-type name="PlayerRed" sid="4752814460806648">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="heart" sid="5374573985628585" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="4404961369494971">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="4379788746141798">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="6374617781838137">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Stand" pingpong="0" repeatcount="1" repeatto="0" sid="2539026429518199" speed="5">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_stand.png" />
+                </animation>
+                <animation framecount="3" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="6727367943149216" speed="7">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_walk1.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_walk2.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_walk3.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="7422336895224873" speed="5">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_up2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="4660368603321327" speed="5">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_fall.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="9220601356639407">
+            <plugin id="Keyboard" />
+        </object-type>
         <object-type name="tileGreen_" sid="2033929265334965">
             <plugin id="Sprite" />
             <behaviors>
@@ -147,7 +187,9 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="6" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
