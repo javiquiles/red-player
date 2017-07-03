@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>ffi862pqu9zv</unique-id>
+    <saved-with-version>18400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1136</width>
+        <height>640</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Chrome</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="set3_background" sid="9837812239597057">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6837021053193852" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Backgrounds\set3_background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="set3_tiles" sid="1080659807110911">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5559195074866836" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500805" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Backgrounds\set3_tiles.png">
+                        <collision-poly>
+                            <point x="0.100352" y="0.183575" />
+                            <point x="0.5" y="0.041868" />
+                            <point x="0.757923" y="0.442834" />
+                            <point x="1" y="0.499195" />
+                            <point x="0.877641" y="0.776167" />
+                            <point x="0.5" y="0.644122" />
+                            <point x="0.0228873" y="0.958132" />
+                            <point x="0" y="0.499195" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="set3_hills" sid="8534383251416515">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="988422668571241" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Backgrounds\set3_hills.png">
+                        <collision-poly>
+                            <point x="0.355236" y="0.720833" />
+                            <point x="0.749487" y="0.508333" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="2407698182595567">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3375127861306359">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Tiles\Green tiles\tileGreen_03.png" />
+        </object-type>
+        <object-type name="TiledBackground2" sid="6279659906494656">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2666281433109032">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Tiles\Green tiles\tileGreen_05.png" />
+        </object-type>
+        <object-type name="tileGreen_" sid="2033929265334965">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="6266033403785916">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2403573964648761" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Tiles\Green tiles\tileGreen_24.png">
+                        <collision-poly>
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.359375" y="0.640625" />
+                            <point x="0.140625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Tiles\Green tiles\tileGreen_25.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0" />
+                            <point x="0.9375" y="0.0625" />
+                            <point x="0.859375" y="0.5" />
+                            <point x="0.640625" y="0.640625" />
+                            <point x="0.5" y="0.703125" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
