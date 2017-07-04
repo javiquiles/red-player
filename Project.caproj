@@ -15,8 +15,10 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -246,6 +248,89 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="enemyFloating_" sid="3484908611989651">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8703115609426492" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemyFloating_1.png">
+                        <collision-poly>
+                            <point x="0.0238095" y="0.025" />
+                            <point x="0.97619" y="0.025" />
+                            <point x="0.97619" y="0.975" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0238095" y="0.975" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemyFlying_" sid="5062359309714571">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="2620875654532415">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="3579180280987659">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="837000949398473" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemyFlying_1.png">
+                        <collision-poly>
+                            <point x="0.109375" y="0.184211" />
+                            <point x="0.5" y="0.368421" />
+                            <point x="0.890625" y="0.184211" />
+                            <point x="0.734375" y="0.5" />
+                            <point x="0.734375" y="0.552632" />
+                            <point x="0.5" y="1" />
+                            <point x="0.265625" y="0.552632" />
+                            <point x="0.265625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemyFlying_2.png">
+                        <collision-poly>
+                            <point x="0.21875" y="0.368421" />
+                            <point x="0.78125" y="0.368421" />
+                            <point x="0.984375" y="0.5" />
+                            <point x="0.734375" y="0.552632" />
+                            <point x="0.5" y="1" />
+                            <point x="0.265625" y="0.552632" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511628" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemyFlying_3.png">
+                        <collision-poly>
+                            <point x="0.28125" y="0.418605" />
+                            <point x="0.5" y="0.325581" />
+                            <point x="0.71875" y="0.418605" />
+                            <point x="0.734375" y="0.488372" />
+                            <point x="0.734375" y="0.604651" />
+                            <point x="0.5" y="0.883721" />
+                            <point x="0.265625" y="0.604651" />
+                            <point x="0.265625" y="0.488372" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemyWalking_" sid="9202639122471361">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="move" sid="4448887049931019" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="2486236836713498">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7355113963515334" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemyWalking_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemyWalking_2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="tileGreen_5" sid="1301994686644757">
             <plugin id="Sprite" />
             <behaviors>
@@ -307,6 +392,42 @@
                             <point x="1" y="0" />
                             <point x="1" y="1" />
                             <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="enemySwimming_" sid="2847958315022775">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5385940696106381">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="6987037568493976" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemySwimming_1.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemySwimming_2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Enemies\enemySwimming_3.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
