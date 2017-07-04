@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
@@ -142,6 +143,9 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="4660368603321327" speed="5">
                     <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_fall.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Dead" pingpong="0" repeatcount="1" repeatto="0" sid="9038885489667923" speed="5">
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Players\Player Red\playerRed_dead.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -428,6 +432,70 @@
                             <point x="0" y="1" />
                             <point x="0" y="0" />
                             <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="blueGem" sid="9520444015016434">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="26086988210416" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Items\blueGem.png">
+                        <collision-poly>
+                            <point x="0.181818" y="0.181818" />
+                            <point x="0.5" y="0" />
+                            <point x="0.818182" y="0.181818" />
+                            <point x="1" y="0.5" />
+                            <point x="0.818182" y="0.818182" />
+                            <point x="0.5" y="1" />
+                            <point x="0.181818" y="0.818182" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gems" sid="6195863812219801">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9976925081135687" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509434" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\extra\Gems.png">
+                        <collision-poly>
+                            <point x="0.16129" y="0.188679" />
+                            <point x="0.5" y="0" />
+                            <point x="0.854839" y="0.169811" />
+                            <point x="1" y="0.490566" />
+                            <point x="0.806452" y="0.773585" />
+                            <point x="0.5" y="1" />
+                            <point x="0.209677" y="0.754717" />
+                            <point x="0.0322581" y="0.490566" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="7020165312023291">
+            <plugin id="SpriteFontPlus" />
+            <instance-variables>
+                <instance-variable name="type" sid="8694964371178485" type="string" />
+            </instance-variables>
+            <texture original-source="C:\Users\Javi\Downloads\Platformer\SpriteFont\SpriteFont_Vogue_Bold_(48).png" />
+        </object-type>
+        <object-type name="hudHeart_full" sid="1849743846563873">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2244792234270237" speed="5">
+                    <frame duration="1" hotspotX="0.508197" hotspotY="0.509434" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\extra\hudHeart_full.png">
+                        <collision-poly>
+                            <point x="0.0819672" y="0.0943396" />
+                            <point x="0.491803" y="0.0754717" />
+                            <point x="0.918033" y="0.0943396" />
+                            <point x="0.967213" y="0.490566" />
+                            <point x="0.786885" y="0.754717" />
+                            <point x="0.491803" y="0.981132" />
+                            <point x="0.213115" y="0.754717" />
+                            <point x="0.0327869" y="0.490566" />
                         </collision-poly>
                     </frame>
                 </animation>

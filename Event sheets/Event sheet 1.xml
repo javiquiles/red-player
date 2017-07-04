@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="Gem" sid="9154479417288735" static="0" type="number">0</variable>
         <event-block sid="2155366383143394">
             <conditions>
                 <condition behavior="Platform" id="8" name="On moved" sid="2648480470799331" type="PlayerRed" />
@@ -118,6 +119,10 @@
                     <param id="1" name="&apos;Off&apos; time">0.15</param>
                     <param id="2" name="Duration">1.5</param>
                 </action>
+                <action id="-12" name="Subtract from" sid="940562132047397" type="PlayerRed">
+                    <param id="0" name="Instance variable">heart</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9703626302172446">
@@ -131,6 +136,10 @@
                     <param id="0" name="&apos;On&apos; time">0.15</param>
                     <param id="1" name="&apos;Off&apos; time">0.15</param>
                     <param id="2" name="Duration">1.5</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="874026341282441" type="PlayerRed">
+                    <param id="0" name="Instance variable">heart</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -146,6 +155,10 @@
                     <param id="1" name="&apos;Off&apos; time">0.15</param>
                     <param id="2" name="Duration">1.5</param>
                 </action>
+                <action id="-12" name="Subtract from" sid="1982755548618929" type="PlayerRed">
+                    <param id="0" name="Instance variable">heart</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8087879338401893">
@@ -159,6 +172,10 @@
                     <param id="0" name="&apos;On&apos; time">0.15</param>
                     <param id="1" name="&apos;Off&apos; time">0.15</param>
                     <param id="2" name="Duration">1.5</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="5035596830789635" type="PlayerRed">
+                    <param id="0" name="Instance variable">heart</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -247,6 +264,100 @@
                     <actions>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="3866251686456815" type="enemySwimming_">
                             <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6160272754543982">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4782615184926801" type="PlayerRed">
+                    <param id="0" name="Object">blueGem</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="628591382919665" type="blueGem" />
+                <action id="-10" name="Add to" sid="6204892744977929" type="System">
+                    <param id="0" name="Variable">Gem</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3660181780182361">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3482957437427294" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8675314033199675">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2493216345944847" type="SpriteFont">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;gem&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4775490092753648" type="SpriteFont">
+                            <param id="0" name="Text">Gem</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5725697037209152">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6044593039297191" type="SpriteFont">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;heart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7342219644040206" type="SpriteFont">
+                            <param id="0" name="Text">PlayerRed.heart</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5668717499881012">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4244877486662358" type="PlayerRed">
+                    <param id="0" name="Instance variable">heart</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="420654430567425">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="1676819349389312" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2437362347273907" type="PlayerRed">
+                            <param id="0" name="Animation">&quot;Dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="7629719776387478" type="PlayerRed">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3289950851560346" type="System">
+                            <param id="0" name="Seconds">2.0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="1201827866281642" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="3185339011505106">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2171665992956695" type="SpriteFont">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;heart&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6571879630108404" type="SpriteFont">
+                            <param id="0" name="Text">&quot;0&quot;</param>
                         </action>
                     </actions>
                 </event-block>
