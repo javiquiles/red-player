@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Chris Kent" id="SpriteFontPlus" version="1">SpriteFont+</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -114,11 +115,8 @@
             </behaviors>
             <texture original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Tiles\Green tiles\tileGreen_05.png" />
         </object-type>
-        <object-type name="PlayerRed" sid="4752814460806648">
+        <object-type name="playerRed" sid="4752814460806648">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="heart" sid="5374573985628585" type="number" />
-            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="4404961369494971">
                     <behavior id="Platform" />
@@ -554,6 +552,114 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Window" sid="3318038454665452">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3130004910173315" speed="5">
+                    <frame duration="1" hotspotX="0.500829" hotspotY="0.501171" original-source="C:\Users\Javi\Downloads\Platformer\GUI\Window.png">
+                        <collision-poly>
+                            <point x="0.0116086" y="0.0163934" />
+                            <point x="0.499171" y="0.00234192" />
+                            <point x="0.985075" y="0.0210773" />
+                            <point x="0.980099" y="0.971897" />
+                            <point x="0.0165837" y="0.976581" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="complete" sid="8314419868955086">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4221174392547714" speed="0">
+                    <frame duration="1" hotspotX="0.501089" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\GUI\complete.png">
+                        <collision-poly>
+                            <point x="0.0827887" y="0.311475" />
+                            <point x="0.498911" y="0" />
+                            <point x="0.917211" y="0.311475" />
+                            <point x="0.923747" y="0.5" />
+                            <point x="0.954248" y="0.827869" />
+                            <point x="0.498911" y="0.606557" />
+                            <point x="0.043573" y="0.836066" />
+                            <point x="0.0784314" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501089" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\GUI\gameover.png">
+                        <collision-poly>
+                            <point x="0.0827887" y="0.311475" />
+                            <point x="0.498911" y="0.00819672" />
+                            <point x="0.917211" y="0.311475" />
+                            <point x="0.923747" y="0.5" />
+                            <point x="0.954248" y="0.827869" />
+                            <point x="0.498911" y="0.606557" />
+                            <point x="0.043573" y="0.836066" />
+                            <point x="0.0784314" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Restart" sid="383964284427252">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6898327784792403" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\GUI\gui\button\Button_74.png">
+                        <collision-poly>
+                            <point x="0.076087" y="0.0729167" />
+                            <point x="0.5" y="0.0104167" />
+                            <point x="0.913043" y="0.0833333" />
+                            <point x="0.978261" y="0.5" />
+                            <point x="0.891304" y="0.895833" />
+                            <point x="0.5" y="0.947917" />
+                            <point x="0.0978261" y="0.90625" />
+                            <point x="0.0108696" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\GUI\gui\button\Button_77.png">
+                        <collision-poly>
+                            <point x="0.076087" y="0.0729167" />
+                            <point x="0.5" y="0.0104167" />
+                            <point x="0.913043" y="0.0833333" />
+                            <point x="0.978261" y="0.5" />
+                            <point x="0.891304" y="0.895833" />
+                            <point x="0.5" y="0.947917" />
+                            <point x="0.0978261" y="0.90625" />
+                            <point x="0.0108696" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="9419631615958351">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="TiledBackground3" sid="2127762117759173">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground4" sid="350840289804554">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="flagGreen_up" sid="3130223526381964">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6562411276619876" speed="5">
+                    <frame duration="1" hotspotX="0.508475" hotspotY="0.508197" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Other\flagGreen_up.png">
+                        <collision-poly>
+                            <point x="0.0338983" y="0.0327869" />
+                            <point x="0.491525" y="0.163934" />
+                            <point x="0.711864" y="0.278689" />
+                            <point x="0.135593" y="0.491803" />
+                            <point x="0.40678" y="0.42623" />
+                            <point x="0.491525" y="0.42623" />
+                            <point x="0.0169492" y="0.983607" />
+                            <point x="0" y="0.491803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -564,6 +670,11 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="6" />
+        <global-instance type="Touch" uid="60">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
     <music-folder />
