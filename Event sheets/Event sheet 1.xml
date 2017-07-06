@@ -379,20 +379,36 @@
                             <param id="1" name="Visibility">1</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="3185339011505106">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2171665992956695" type="SpriteFont">
-                            <param id="0" name="Instance variable">type</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;heart&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="6571879630108404" type="SpriteFont">
-                            <param id="0" name="Text">&quot;0&quot;</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="3185339011505106">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2171665992956695" type="SpriteFont">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;heart&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6571879630108404" type="SpriteFont">
+                                    <param id="0" name="Text">&quot;0&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8664678125574526">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6285424538133136" type="SpriteFont">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;key&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1542940341334476" type="SpriteFont">
+                                    <param id="0" name="Text">playerRed.key</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -445,7 +461,11 @@
         <event-block sid="2640143562631353">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="7083751771590946" type="playerRed">
-                    <param id="0" name="Object">flagGreen_up</param>
+                    <param id="0" name="Object">doorGreen_lock</param>
+                </condition>
+                <condition id="3" name="Compare frame" sid="2929873575371746" type="doorGreen_lock">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Number">1</param>
                 </condition>
             </conditions>
             <actions>
@@ -620,5 +640,47 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-block sid="259870341488087">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6614540230179176" type="playerRed">
+                    <param id="0" name="Object">keyGreen</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9841772952814121" type="keyGreen" />
+                <action id="-11" name="Add to" sid="948390731478526" type="playerRed">
+                    <param id="0" name="Instance variable">key</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="2512847085420212" type="keyHUD">
+                    <param id="0" name="Frame number">playerRed.key</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3645501265139754">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4226233243586106" type="playerRed">
+                    <param id="0" name="Instance variable">key</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9825476348722055">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="5002741702389119" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4567828926371179" type="doorGreen_lock">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="5006257341401098" type="doorGreen_top">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

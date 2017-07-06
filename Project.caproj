@@ -117,6 +117,9 @@
         </object-type>
         <object-type name="playerRed" sid="4752814460806648">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="key" sid="8275529826539075" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="4404961369494971">
                     <behavior id="Platform" />
@@ -641,20 +644,115 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="flagGreen_up" sid="3130223526381964">
+        <object-type name="keyGreen" sid="6526585889154062">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6562411276619876" speed="5">
-                    <frame duration="1" hotspotX="0.508475" hotspotY="0.508197" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Other\flagGreen_up.png">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4758924477185837" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Items\keyGreen.png">
                         <collision-poly>
-                            <point x="0.0338983" y="0.0327869" />
-                            <point x="0.491525" y="0.163934" />
-                            <point x="0.711864" y="0.278689" />
-                            <point x="0.135593" y="0.491803" />
-                            <point x="0.40678" y="0.42623" />
-                            <point x="0.491525" y="0.42623" />
-                            <point x="0.0169492" y="0.983607" />
-                            <point x="0" y="0.491803" />
+                            <point x="0.310345" y="0.3" />
+                            <point x="0.482759" y="0.0333333" />
+                            <point x="0.896552" y="0.1" />
+                            <point x="0.965517" y="0.5" />
+                            <point x="0.689655" y="0.7" />
+                            <point x="0.482759" y="0.7" />
+                            <point x="0.0344828" y="0.966667" />
+                            <point x="0.310345" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="keyHUD" sid="9442640398047093">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9223226019379235" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0.509434" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\extra\key0.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.509434" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\extra\key1.png">
+                        <collision-poly>
+                            <point x="0.0853659" y="0.264151" />
+                            <point x="0.256098" y="0.490566" />
+                            <point x="0.0243902" y="0.924528" />
+                            <point x="0.0792683" y="0.490566" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.509434" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\extra\key2.png">
+                        <collision-poly>
+                            <point x="0.0853659" y="0.264151" />
+                            <point x="0.5" y="0.113208" />
+                            <point x="0.609756" y="0.490566" />
+                            <point x="0.5" y="0.698113" />
+                            <point x="0.0243902" y="0.924528" />
+                            <point x="0.0792683" y="0.490566" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0.511111" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\extra\key3.png">
+                        <collision-poly>
+                            <point x="0.0880503" y="0.311111" />
+                            <point x="0.496855" y="0.0666667" />
+                            <point x="0.962264" y="0.133333" />
+                            <point x="0.987421" y="0.488889" />
+                            <point x="0.918239" y="0.711111" />
+                            <point x="0.496855" y="0.733333" />
+                            <point x="0.0188679" y="0.933333" />
+                            <point x="0.0880503" y="0.488889" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="doorGreen_top" sid="2270977051656895">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4559925438866941" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Other\doorGreen_top.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Other\doorOpen_top.png">
+                        <collision-poly>
+                            <point x="0.03125" y="0.03125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.96875" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="doorGreen_lock" sid="3421122518546656">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2766651475681664" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Other\doorGreen_lock.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\Other\doorOpen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="key" sid="2619832989897068">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7491703485405789" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.511111" original-source="C:\Users\Javi\Downloads\Platformer\Abstract Platformer\PNG\extra\key.png">
+                        <collision-poly>
+                            <point x="0.311111" y="0.311111" />
+                            <point x="0.488889" y="0.0666667" />
+                            <point x="0.866667" y="0.133333" />
+                            <point x="0.933333" y="0.488889" />
+                            <point x="0.711111" y="0.711111" />
+                            <point x="0.488889" y="0.733333" />
+                            <point x="0.0666667" y="0.933333" />
+                            <point x="0.311111" y="0.488889" />
                         </collision-poly>
                     </frame>
                 </animation>
